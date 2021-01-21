@@ -20,6 +20,16 @@ class Event: Mappable {
     var longitude: Double?
     var price: Float?
     
+    var dateString: String {
+        guard let date = date else { return "" }
+        let dateFormatter = DateFormatter()
+
+        dateFormatter.dateStyle = .long
+        dateFormatter.timeStyle = .short
+        dateFormatter.locale = Locale(identifier: "pt-br")
+        return dateFormatter.string(from: date)
+    }
+    
     required init?(map: Map) {
 
     }
