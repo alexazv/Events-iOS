@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,16 @@
 		ACCF9B6125B9AC3B0083300A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACCF9B5F25B9AC3B0083300A /* LaunchScreen.storyboard */; };
 		ACCF9B6C25B9AC3B0083300A /* Events_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCF9B6B25B9AC3B0083300A /* Events_iOSTests.swift */; };
 		ACCF9B7725B9AC3B0083300A /* Events_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCF9B7625B9AC3B0083300A /* Events_iOSUITests.swift */; };
+		ACCF9BA125B9AD510083300A /* MockEvents.json in Resources */ = {isa = PBXBuildFile; fileRef = ACCF9BA025B9AD510083300A /* MockEvents.json */; };
+		ACCF9BA625B9ADB40083300A /* EventDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCF9BA525B9ADB40083300A /* EventDataSource.swift */; };
+		ACCF9BAC25B9AE1A0083300A /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCF9BAB25B9AE1A0083300A /* Event.swift */; };
+		ACCF9BB225B9B0750083300A /* RequestMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCF9BB025B9B0750083300A /* RequestMaker.swift */; };
+		ACCF9BB325B9B0750083300A /* HTTPRequestMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCF9BB125B9B0750083300A /* HTTPRequestMaker.swift */; };
+		ACCF9BB825B9B0920083300A /* RuntimeError.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCF9BB725B9B0920083300A /* RuntimeError.swift */; };
+		ACCF9BBD25B9B0EC0083300A /* MockEventRequestMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCF9BBC25B9B0EC0083300A /* MockEventRequestMaker.swift */; };
+		ACCF9BC525B9B1EF0083300A /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCF9BC425B9B1EF0083300A /* DataSource.swift */; };
+		ACCF9BCA25B9B2320083300A /* EventAPISource.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCF9BC925B9B2320083300A /* EventAPISource.swift */; };
+		ACCF9BD225B9B8E80083300A /* NetworkTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCF9BD125B9B8E80083300A /* NetworkTest.swift */; };
 		B3FB534654827D78E3A20336 /* Pods_Events_iOS_Events_iOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC23DFD3D07EF35095D02FEF /* Pods_Events_iOS_Events_iOSUITests.framework */; };
 		E328CE9EBF98B25FA2B553D3 /* Pods_Events_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68F383E096B0DFF367E16F4C /* Pods_Events_iOSTests.framework */; };
 		FD7D99074EEA7554C8D8A0CC /* Pods_Events_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8CDC95A8E30D3973564FC4B /* Pods_Events_iOS.framework */; };
@@ -57,6 +67,16 @@
 		ACCF9B7225B9AC3B0083300A /* Events-iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Events-iOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACCF9B7625B9AC3B0083300A /* Events_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Events_iOSUITests.swift; sourceTree = "<group>"; };
 		ACCF9B7825B9AC3B0083300A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ACCF9BA025B9AD510083300A /* MockEvents.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MockEvents.json; sourceTree = "<group>"; };
+		ACCF9BA525B9ADB40083300A /* EventDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDataSource.swift; sourceTree = "<group>"; };
+		ACCF9BAB25B9AE1A0083300A /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		ACCF9BB025B9B0750083300A /* RequestMaker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestMaker.swift; sourceTree = "<group>"; };
+		ACCF9BB125B9B0750083300A /* HTTPRequestMaker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPRequestMaker.swift; sourceTree = "<group>"; };
+		ACCF9BB725B9B0920083300A /* RuntimeError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RuntimeError.swift; sourceTree = "<group>"; };
+		ACCF9BBC25B9B0EC0083300A /* MockEventRequestMaker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockEventRequestMaker.swift; sourceTree = "<group>"; };
+		ACCF9BC425B9B1EF0083300A /* DataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
+		ACCF9BC925B9B2320083300A /* EventAPISource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventAPISource.swift; sourceTree = "<group>"; };
+		ACCF9BD125B9B8E80083300A /* NetworkTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkTest.swift; sourceTree = "<group>"; };
 		D9A2B32D0EABFB8096F420E7 /* Pods-Events-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Events-iOS.debug.xcconfig"; path = "Target Support Files/Pods-Events-iOS/Pods-Events-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		F1AF38B7985CAA8D60046C10 /* Pods-Events-iOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Events-iOSTests.debug.xcconfig"; path = "Target Support Files/Pods-Events-iOSTests/Pods-Events-iOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		FC23DFD3D07EF35095D02FEF /* Pods_Events_iOS_Events_iOSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Events_iOS_Events_iOSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -101,7 +121,6 @@
 				F1AF38B7985CAA8D60046C10 /* Pods-Events-iOSTests.debug.xcconfig */,
 				8D5B1F55DCD16C149ACED7AF /* Pods-Events-iOSTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -130,6 +149,8 @@
 		ACCF9B5325B9AC390083300A /* Events-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				ACCF9BAA25B9AE090083300A /* Model */,
+				ACCF9B9125B9ACEA0083300A /* Network */,
 				ACCF9B5425B9AC390083300A /* AppDelegate.swift */,
 				ACCF9B5625B9AC390083300A /* SceneDelegate.swift */,
 				ACCF9B5825B9AC390083300A /* ViewController.swift */,
@@ -144,6 +165,7 @@
 		ACCF9B6A25B9AC3B0083300A /* Events-iOSTests */ = {
 			isa = PBXGroup;
 			children = (
+				ACCF9BD125B9B8E80083300A /* NetworkTest.swift */,
 				ACCF9B6B25B9AC3B0083300A /* Events_iOSTests.swift */,
 				ACCF9B6D25B9AC3B0083300A /* Info.plist */,
 			);
@@ -157,6 +179,38 @@
 				ACCF9B7825B9AC3B0083300A /* Info.plist */,
 			);
 			path = "Events-iOSUITests";
+			sourceTree = "<group>";
+		};
+		ACCF9B9125B9ACEA0083300A /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				ACCF9BC925B9B2320083300A /* EventAPISource.swift */,
+				ACCF9BC425B9B1EF0083300A /* DataSource.swift */,
+				ACCF9BB725B9B0920083300A /* RuntimeError.swift */,
+				ACCF9BB125B9B0750083300A /* HTTPRequestMaker.swift */,
+				ACCF9BB025B9B0750083300A /* RequestMaker.swift */,
+				ACCF9B9225B9ACF30083300A /* Mock */,
+				ACCF9BA525B9ADB40083300A /* EventDataSource.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		ACCF9B9225B9ACF30083300A /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				ACCF9BBC25B9B0EC0083300A /* MockEventRequestMaker.swift */,
+				ACCF9BA025B9AD510083300A /* MockEvents.json */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		ACCF9BAA25B9AE090083300A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				ACCF9BAB25B9AE1A0083300A /* Event.swift */,
+			);
+			name = Model;
+			path = "Modeç";
 			sourceTree = "<group>";
 		};
 		DC5C24402C4B9E0671867FF7 /* Frameworks */ = {
@@ -199,6 +253,7 @@
 				ACCF9B6325B9AC3B0083300A /* Sources */,
 				ACCF9B6425B9AC3B0083300A /* Frameworks */,
 				ACCF9B6525B9AC3B0083300A /* Resources */,
+				E858D1EE982CEA039A2801A0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -279,6 +334,7 @@
 			files = (
 				ACCF9B6125B9AC3B0083300A /* LaunchScreen.storyboard in Resources */,
 				ACCF9B5E25B9AC3B0083300A /* Assets.xcassets in Resources */,
+				ACCF9BA125B9AD510083300A /* MockEvents.json in Resources */,
 				ACCF9B5C25B9AC390083300A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -400,6 +456,23 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Events-iOS-Events-iOSUITests/Pods-Events-iOS-Events-iOSUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		E858D1EE982CEA039A2801A0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Events-iOSTests/Pods-Events-iOSTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Events-iOSTests/Pods-Events-iOSTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Events-iOSTests/Pods-Events-iOSTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -408,8 +481,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACCF9B5925B9AC390083300A /* ViewController.swift in Sources */,
+				ACCF9BA625B9ADB40083300A /* EventDataSource.swift in Sources */,
+				ACCF9BCA25B9B2320083300A /* EventAPISource.swift in Sources */,
 				ACCF9B5525B9AC390083300A /* AppDelegate.swift in Sources */,
+				ACCF9BB825B9B0920083300A /* RuntimeError.swift in Sources */,
 				ACCF9B5725B9AC390083300A /* SceneDelegate.swift in Sources */,
+				ACCF9BB225B9B0750083300A /* RequestMaker.swift in Sources */,
+				ACCF9BB325B9B0750083300A /* HTTPRequestMaker.swift in Sources */,
+				ACCF9BBD25B9B0EC0083300A /* MockEventRequestMaker.swift in Sources */,
+				ACCF9BC525B9B1EF0083300A /* DataSource.swift in Sources */,
+				ACCF9BAC25B9AE1A0083300A /* Event.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,6 +498,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACCF9BD225B9B8E80083300A /* NetworkTest.swift in Sources */,
 				ACCF9B6C25B9AC3B0083300A /* Events_iOSTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

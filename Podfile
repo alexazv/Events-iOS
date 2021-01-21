@@ -15,6 +15,8 @@ target 'Events-iOS' do
   target 'Events-iOSTests' do
     inherit! :search_paths
     # Pods for testing
+    pod 'RxBlocking', '6.0.0'
+    pod 'RxTest', '6.0.0'
   end
 
   target 'Events-iOSUITests' do
