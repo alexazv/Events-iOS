@@ -18,6 +18,10 @@ class EventFeedViewController: UIViewController, UITableViewDelegate, UITableVie
         self.setupViewModel()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+    }
+    
     private func setupViewModel() {
         viewModel = EventFeedViewModel(bindToViewController: onViewModelUpdate)
     }

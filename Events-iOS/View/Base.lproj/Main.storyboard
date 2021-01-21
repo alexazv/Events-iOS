@@ -106,7 +106,7 @@
                             <constraint firstItem="AId-hv-Ljd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Rzm-w3-yox"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="uVc-Yo-hdH"/>
+                    <navigationItem key="navigationItem" title="Eventos" id="uVc-Yo-hdH"/>
                     <connections>
                         <outlet property="tableView" destination="AId-hv-Ljd" id="KWb-BG-5hn"/>
                     </connections>
@@ -115,16 +115,17 @@
             </objects>
             <point key="canvasLocation" x="1050.7246376811595" y="57.589285714285708"/>
         </scene>
-        <!--Event Detail View Controller-->
+        <!--Evento-->
         <scene sceneID="uTD-x1-qKP">
             <objects>
-                <viewController storyboardIdentifier="EventDetailViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Pds-rf-e0w" customClass="EventDetailViewController" customModule="Events_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EventDetailViewController" title="Evento" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Pds-rf-e0w" customClass="EventDetailViewController" customModule="Events_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NJA-rW-9Q6">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VLq-hs-y6Z">
                                 <rect key="frame" x="0.0" y="44" width="414" height="120"/>
+                                <color key="backgroundColor" red="0.98823529409999999" green="0.85098039219999999" blue="0.61568627450000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="120" id="TId-B6-the"/>
                                 </constraints>
@@ -147,12 +148,22 @@
                                     <constraint firstAttribute="height" constant="120" id="uYY-5g-wpN"/>
                                 </constraints>
                             </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tg5-8e-Gh5">
-                                <rect key="frame" x="346" y="126" width="60" height="30"/>
-                                <color key="backgroundColor" red="1" green="0.83503608750000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <button opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tg5-8e-Gh5">
+                                <rect key="frame" x="326" y="96" width="80" height="60"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="gZA-f6-EgZ"/>
+                                    <constraint firstAttribute="width" constant="80" id="vd8-5d-Pdx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Check in">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="didTapCheckin" destination="Pds-rf-e0w" eventType="touchUpInside" id="iwb-ad-HM9"/>
                                 </connections>
@@ -166,7 +177,6 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L3c-dh-lb2">
                                 <rect key="frame" x="16" y="398" width="382" height="448"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -211,10 +221,10 @@
             </objects>
             <point key="canvasLocation" x="1990" y="58"/>
         </scene>
-        <!--Event Checkin View Controller-->
+        <!--Check in-->
         <scene sceneID="adL-n9-Kbu">
             <objects>
-                <viewController storyboardIdentifier="EventCheckinViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="5Zk-Lu-3ZQ" customClass="EventCheckinViewController" customModule="Events_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EventCheckinViewController" title="Check in" useStoryboardIdentifierAsRestorationIdentifier="YES" id="5Zk-Lu-3ZQ" customClass="EventCheckinViewController" customModule="Events_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QQh-hn-jjc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -295,7 +305,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TVJ-R6-nZ9" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xio-l2-Gtg">
+                    <navigationBar key="navigationBar" alpha="0.0" tag="1" contentMode="scaleToFill" semanticContentAttribute="playback" id="xio-l2-Gtg">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -309,12 +319,16 @@
             <point key="canvasLocation" x="140.57971014492756" y="57.589285714285708"/>
         </scene>
     </scenes>
+    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
