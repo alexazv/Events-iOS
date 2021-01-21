@@ -14,6 +14,7 @@ PODS:
   - RxTest (6.0.0):
     - RxSwift (= 6.0.0)
   - SwiftLint (0.42.0)
+  - SwiftValidator (4.0.0)
 
 DEPENDENCIES:
   - AlamofireImage (~> 4.1)
@@ -23,6 +24,7 @@ DEPENDENCIES:
   - RxSwift (= 6.0.0)
   - RxTest (= 6.0.0)
   - SwiftLint
+  - SwiftValidator (from `https://github.com/jpotts18/SwiftValidator.git`, tag `4.2.0`)
 
 SPEC REPOS:
   trunk:
@@ -36,6 +38,16 @@ SPEC REPOS:
     - RxTest
     - SwiftLint
 
+EXTERNAL SOURCES:
+  SwiftValidator:
+    :git: https://github.com/jpotts18/SwiftValidator.git
+    :tag: 4.2.0
+
+CHECKOUT OPTIONS:
+  SwiftValidator:
+    :git: https://github.com/jpotts18/SwiftValidator.git
+    :tag: 4.2.0
+
 SPEC CHECKSUMS:
   Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
   AlamofireImage: c4a2ba349885fb3064feb74d2e547bd42ce9be10
@@ -46,7 +58,8 @@ SPEC CHECKSUMS:
   RxSwift: c14e798c59b9f6e9a2df8fd235602e85cc044295
   RxTest: ddef4052e63cb116f5b73510488c3113c37c62e5
   SwiftLint: 4fa9579c63416865179bc416f0a92d55f009600d
+  SwiftValidator: 249b6b3ae3b294266c5b9de134d94f18f2d5aa47
 
-PODFILE CHECKSUM: 458b908e01fe39490c8568b66251788e0d4234ec
+PODFILE CHECKSUM: af6d7cc54cde476e8f1c227782a450ea001ca259
 
 COCOAPODS: 1.8.4
