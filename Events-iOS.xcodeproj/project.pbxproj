@@ -27,6 +27,8 @@
 		ACCF9BD225B9B8E80083300A /* NetworkTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCF9BD125B9B8E80083300A /* NetworkTest.swift */; };
 		ACCF9BF125B9D5D50083300A /* EventFeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCF9BF025B9D5D50083300A /* EventFeedViewModel.swift */; };
 		ACCF9BFC25B9E11D0083300A /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCF9BFB25B9E11D0083300A /* EventTableViewCell.swift */; };
+		ACCF9C0425B9E9BA0083300A /* EventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCF9C0325B9E9BA0083300A /* EventDetailViewController.swift */; };
+		ACCF9C0925B9F9200083300A /* EventDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCF9C0825B9F9200083300A /* EventDetailViewModel.swift */; };
 		B3FB534654827D78E3A20336 /* Pods_Events_iOS_Events_iOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC23DFD3D07EF35095D02FEF /* Pods_Events_iOS_Events_iOSUITests.framework */; };
 		E328CE9EBF98B25FA2B553D3 /* Pods_Events_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68F383E096B0DFF367E16F4C /* Pods_Events_iOSTests.framework */; };
 		FD7D99074EEA7554C8D8A0CC /* Pods_Events_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8CDC95A8E30D3973564FC4B /* Pods_Events_iOS.framework */; };
@@ -81,6 +83,8 @@
 		ACCF9BD125B9B8E80083300A /* NetworkTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkTest.swift; sourceTree = "<group>"; };
 		ACCF9BF025B9D5D50083300A /* EventFeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventFeedViewModel.swift; sourceTree = "<group>"; };
 		ACCF9BFB25B9E11D0083300A /* EventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
+		ACCF9C0325B9E9BA0083300A /* EventDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailViewController.swift; sourceTree = "<group>"; };
+		ACCF9C0825B9F9200083300A /* EventDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailViewModel.swift; sourceTree = "<group>"; };
 		D9A2B32D0EABFB8096F420E7 /* Pods-Events-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Events-iOS.debug.xcconfig"; path = "Target Support Files/Pods-Events-iOS/Pods-Events-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		F1AF38B7985CAA8D60046C10 /* Pods-Events-iOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Events-iOSTests.debug.xcconfig"; path = "Target Support Files/Pods-Events-iOSTests/Pods-Events-iOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		FC23DFD3D07EF35095D02FEF /* Pods_Events_iOS_Events_iOSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Events_iOS_Events_iOSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -223,6 +227,7 @@
 				ACCF9B5825B9AC390083300A /* EventFeedViewController.swift */,
 				ACCF9B5A25B9AC390083300A /* Main.storyboard */,
 				ACCF9BFB25B9E11D0083300A /* EventTableViewCell.swift */,
+				ACCF9C0325B9E9BA0083300A /* EventDetailViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -231,6 +236,7 @@
 			isa = PBXGroup;
 			children = (
 				ACCF9BF025B9D5D50083300A /* EventFeedViewModel.swift */,
+				ACCF9C0825B9F9200083300A /* EventDetailViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -514,7 +520,9 @@
 				ACCF9BB325B9B0750083300A /* HTTPRequestMaker.swift in Sources */,
 				ACCF9BBD25B9B0EC0083300A /* MockEventRequestMaker.swift in Sources */,
 				ACCF9BC525B9B1EF0083300A /* DataSource.swift in Sources */,
+				ACCF9C0425B9E9BA0083300A /* EventDetailViewController.swift in Sources */,
 				ACCF9BAC25B9AE1A0083300A /* Event.swift in Sources */,
+				ACCF9C0925B9F9200083300A /* EventDetailViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
