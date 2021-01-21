@@ -33,7 +33,7 @@ class EventCheckinViewController: UIViewController, ValidationDelegate {
         }
         
         if let emailField = self.emailField {
-            validator.registerField(emailField, errorLabel: emailErrorLabel, rules: [RequiredRule(), EmailRule(message: "Invalid email")])
+            validator.registerField(emailField, errorLabel: emailErrorLabel, rules: [RequiredRule(message: "Campo obrigatório"), EmailRule(message: "Email inválido")])
         }
         resetErrors()
     }
