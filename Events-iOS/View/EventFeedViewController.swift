@@ -53,5 +53,15 @@ class EventFeedViewController: UIViewController, UITableViewDelegate, UITableVie
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        guard let eventId = viewModel?.events[indexPath.item].eventId else { return }
+        
+        let storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc: EventDetailViewController = storyboard.instantiateViewController(withIdentifier: "EventDetailViewController") as! EventDetailViewController
+        vc.setup(eventId)
+        
+        navigationController?.pushViewController(vc, animated: true)
+    }
 }
 
