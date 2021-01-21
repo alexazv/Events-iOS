@@ -32,7 +32,7 @@ class EventDetailViewController: UIViewController {
         priceLabel?.text = String(format: "R$%.2f", event.price ?? 0)
         descriptionTextField?.text = event.description
         if let url = event.imageUrl {
-            eventImage?.af.setImage(withURL: url)
+            eventImage?.af.setImage(withURL: url, imageTransition: UIImageView.ImageTransition.crossDissolve(0.25), runImageTransitionIfCached: true)
         }
     }
     

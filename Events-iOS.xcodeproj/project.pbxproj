@@ -139,7 +139,6 @@
 		ACCF9B4825B9AC380083300A = {
 			isa = PBXGroup;
 			children = (
-				ACCF9BEF25B9D5C20083300A /* ViewModel */,
 				ACCF9B5325B9AC390083300A /* Events-iOS */,
 				ACCF9B6A25B9AC3B0083300A /* Events-iOSTests */,
 				ACCF9B7525B9AC3B0083300A /* Events-iOSUITests */,
@@ -162,6 +161,7 @@
 		ACCF9B5325B9AC390083300A /* Events-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				ACCF9BEF25B9D5C20083300A /* ViewModel */,
 				ACCF9BEE25B9D5B30083300A /* View */,
 				ACCF9BAA25B9AE090083300A /* Model */,
 				ACCF9B9125B9ACEA0083300A /* Network */,
@@ -221,8 +221,7 @@
 			children = (
 				ACCF9BAB25B9AE1A0083300A /* Event.swift */,
 			);
-			name = Model;
-			path = "Modeç";
+			path = Model;
 			sourceTree = "<group>";
 		};
 		ACCF9BEE25B9D5B30083300A /* View */ = {
