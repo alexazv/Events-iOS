@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		ACCF9B5525B9AC390083300A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCF9B5425B9AC390083300A /* AppDelegate.swift */; };
 		ACCF9B5725B9AC390083300A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCF9B5625B9AC390083300A /* SceneDelegate.swift */; };
-		ACCF9B5925B9AC390083300A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCF9B5825B9AC390083300A /* ViewController.swift */; };
+		ACCF9B5925B9AC390083300A /* EventFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCF9B5825B9AC390083300A /* EventFeedViewController.swift */; };
 		ACCF9B5C25B9AC390083300A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACCF9B5A25B9AC390083300A /* Main.storyboard */; };
 		ACCF9B5E25B9AC3B0083300A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACCF9B5D25B9AC3B0083300A /* Assets.xcassets */; };
 		ACCF9B6125B9AC3B0083300A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACCF9B5F25B9AC3B0083300A /* LaunchScreen.storyboard */; };
@@ -25,6 +25,8 @@
 		ACCF9BC525B9B1EF0083300A /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCF9BC425B9B1EF0083300A /* DataSource.swift */; };
 		ACCF9BCA25B9B2320083300A /* EventAPISource.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCF9BC925B9B2320083300A /* EventAPISource.swift */; };
 		ACCF9BD225B9B8E80083300A /* NetworkTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCF9BD125B9B8E80083300A /* NetworkTest.swift */; };
+		ACCF9BF125B9D5D50083300A /* EventFeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCF9BF025B9D5D50083300A /* EventFeedViewModel.swift */; };
+		ACCF9BFC25B9E11D0083300A /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCF9BFB25B9E11D0083300A /* EventTableViewCell.swift */; };
 		B3FB534654827D78E3A20336 /* Pods_Events_iOS_Events_iOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC23DFD3D07EF35095D02FEF /* Pods_Events_iOS_Events_iOSUITests.framework */; };
 		E328CE9EBF98B25FA2B553D3 /* Pods_Events_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68F383E096B0DFF367E16F4C /* Pods_Events_iOSTests.framework */; };
 		FD7D99074EEA7554C8D8A0CC /* Pods_Events_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8CDC95A8E30D3973564FC4B /* Pods_Events_iOS.framework */; };
@@ -56,7 +58,7 @@
 		ACCF9B5125B9AC390083300A /* Events-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Events-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACCF9B5425B9AC390083300A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ACCF9B5625B9AC390083300A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		ACCF9B5825B9AC390083300A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		ACCF9B5825B9AC390083300A /* EventFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventFeedViewController.swift; sourceTree = "<group>"; };
 		ACCF9B5B25B9AC390083300A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ACCF9B5D25B9AC3B0083300A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ACCF9B6025B9AC3B0083300A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -77,6 +79,8 @@
 		ACCF9BC425B9B1EF0083300A /* DataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
 		ACCF9BC925B9B2320083300A /* EventAPISource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventAPISource.swift; sourceTree = "<group>"; };
 		ACCF9BD125B9B8E80083300A /* NetworkTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkTest.swift; sourceTree = "<group>"; };
+		ACCF9BF025B9D5D50083300A /* EventFeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventFeedViewModel.swift; sourceTree = "<group>"; };
+		ACCF9BFB25B9E11D0083300A /* EventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
 		D9A2B32D0EABFB8096F420E7 /* Pods-Events-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Events-iOS.debug.xcconfig"; path = "Target Support Files/Pods-Events-iOS/Pods-Events-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		F1AF38B7985CAA8D60046C10 /* Pods-Events-iOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Events-iOSTests.debug.xcconfig"; path = "Target Support Files/Pods-Events-iOSTests/Pods-Events-iOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		FC23DFD3D07EF35095D02FEF /* Pods_Events_iOS_Events_iOSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Events_iOS_Events_iOSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -127,6 +131,7 @@
 		ACCF9B4825B9AC380083300A = {
 			isa = PBXGroup;
 			children = (
+				ACCF9BEF25B9D5C20083300A /* ViewModel */,
 				ACCF9B5325B9AC390083300A /* Events-iOS */,
 				ACCF9B6A25B9AC3B0083300A /* Events-iOSTests */,
 				ACCF9B7525B9AC3B0083300A /* Events-iOSUITests */,
@@ -149,12 +154,11 @@
 		ACCF9B5325B9AC390083300A /* Events-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				ACCF9BEE25B9D5B30083300A /* View */,
 				ACCF9BAA25B9AE090083300A /* Model */,
 				ACCF9B9125B9ACEA0083300A /* Network */,
 				ACCF9B5425B9AC390083300A /* AppDelegate.swift */,
 				ACCF9B5625B9AC390083300A /* SceneDelegate.swift */,
-				ACCF9B5825B9AC390083300A /* ViewController.swift */,
-				ACCF9B5A25B9AC390083300A /* Main.storyboard */,
 				ACCF9B5D25B9AC3B0083300A /* Assets.xcassets */,
 				ACCF9B5F25B9AC3B0083300A /* LaunchScreen.storyboard */,
 				ACCF9B6225B9AC3B0083300A /* Info.plist */,
@@ -211,6 +215,24 @@
 			);
 			name = Model;
 			path = "Modeç";
+			sourceTree = "<group>";
+		};
+		ACCF9BEE25B9D5B30083300A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				ACCF9B5825B9AC390083300A /* EventFeedViewController.swift */,
+				ACCF9B5A25B9AC390083300A /* Main.storyboard */,
+				ACCF9BFB25B9E11D0083300A /* EventTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		ACCF9BEF25B9D5C20083300A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				ACCF9BF025B9D5D50083300A /* EventFeedViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		DC5C24402C4B9E0671867FF7 /* Frameworks */ = {
@@ -480,11 +502,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ACCF9B5925B9AC390083300A /* ViewController.swift in Sources */,
+				ACCF9BFC25B9E11D0083300A /* EventTableViewCell.swift in Sources */,
+				ACCF9B5925B9AC390083300A /* EventFeedViewController.swift in Sources */,
 				ACCF9BA625B9ADB40083300A /* EventDataSource.swift in Sources */,
 				ACCF9BCA25B9B2320083300A /* EventAPISource.swift in Sources */,
 				ACCF9B5525B9AC390083300A /* AppDelegate.swift in Sources */,
 				ACCF9BB825B9B0920083300A /* RuntimeError.swift in Sources */,
+				ACCF9BF125B9D5D50083300A /* EventFeedViewModel.swift in Sources */,
 				ACCF9B5725B9AC390083300A /* SceneDelegate.swift in Sources */,
 				ACCF9BB225B9B0750083300A /* RequestMaker.swift in Sources */,
 				ACCF9BB325B9B0750083300A /* HTTPRequestMaker.swift in Sources */,
