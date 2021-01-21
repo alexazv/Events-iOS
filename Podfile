@@ -9,6 +9,7 @@ target 'Events-iOS' do
   pod 'ObjectMapper', '~> 3.5'
   pod 'RxSwift', '6.0.0'
   pod 'RxCocoa', '6.0.0'
+  pod 'SwiftValidator', :git => 'https://github.com/jpotts18/SwiftValidator.git', :tag => '4.2.0'
 
   # Pods for Events-iOS
 
