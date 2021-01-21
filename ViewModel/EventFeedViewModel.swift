@@ -12,7 +12,7 @@ class EventFeedViewModel {
     private let disposeBag = DisposeBag()
     var bindToViewController: (() -> Void) = {}
     var bindLoadingChange: (() -> Void) = {}
-    private var dataSource: EventDataSource = DataSource.eventDataSource()
+    private (set) var dataSource: EventDataSource = DataSource.eventDataSource()
     private (set) var error: Error?
     private (set) var events: [Event] = []
     private (set) var loading = false {

@@ -9,8 +9,17 @@ import Foundation
 import Alamofire
 
 class HTTPRequestMaker: RequestMaker {
-    func request(_ url: String, parameters: [String : Any], completion: @escaping (Data?, Error?) -> Void) {
-        AF.request(url, method: .get, parameters: parameters as Parameters)
+    
+    func get(_ url: String, parameters: [String : Any], completion: @escaping (Data?, Error?) -> Void) {
+        makeRequest(method: .get, url, parameters: parameters, completion: completion)
+    }
+    
+    func post(_ url: String, parameters: [String : Any], completion: @escaping (Data?, Error?) -> Void) {
+        makeRequest(method: .post, url, parameters: parameters, completion: completion)
+    }
+    
+    private func makeRequest(method: HTTPMethod, _ url: String, parameters: [String : Any], completion: @escaping (Data?, Error?) -> Void) {
+        AF.request(url, method: method, parameters: parameters as Parameters)
             .validate(statusCode: 200..<300)
             .response { response in
             
