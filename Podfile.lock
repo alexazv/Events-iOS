@@ -3,19 +3,25 @@ PODS:
   - AlamofireImage (4.1.0):
     - Alamofire (~> 5.1)
   - ObjectMapper (3.5.3)
+  - RxBlocking (6.0.0):
+    - RxSwift (= 6.0.0)
   - RxCocoa (6.0.0):
     - RxRelay (= 6.0.0)
     - RxSwift (= 6.0.0)
   - RxRelay (6.0.0):
     - RxSwift (= 6.0.0)
   - RxSwift (6.0.0)
+  - RxTest (6.0.0):
+    - RxSwift (= 6.0.0)
   - SwiftLint (0.42.0)
 
 DEPENDENCIES:
   - AlamofireImage (~> 4.1)
   - ObjectMapper (~> 3.5)
+  - RxBlocking (= 6.0.0)
   - RxCocoa (= 6.0.0)
   - RxSwift (= 6.0.0)
+  - RxTest (= 6.0.0)
   - SwiftLint
 
 SPEC REPOS:
@@ -23,20 +29,24 @@ SPEC REPOS:
     - Alamofire
     - AlamofireImage
     - ObjectMapper
+    - RxBlocking
     - RxCocoa
     - RxRelay
     - RxSwift
+    - RxTest
     - SwiftLint
 
 SPEC CHECKSUMS:
   Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
   AlamofireImage: c4a2ba349885fb3064feb74d2e547bd42ce9be10
   ObjectMapper: 97111c97e054a6ee25917662106689f0b4127b37
+  RxBlocking: c025b8c6fe08c5b18c039b5b11d41ec413f8a59e
   RxCocoa: 3f79328fafa3645b34600f37c31e64c73ae3a80e
   RxRelay: 8d593be109c06ea850df027351beba614b012ffb
   RxSwift: c14e798c59b9f6e9a2df8fd235602e85cc044295
+  RxTest: ddef4052e63cb116f5b73510488c3113c37c62e5
   SwiftLint: 4fa9579c63416865179bc416f0a92d55f009600d
 
-PODFILE CHECKSUM: 45239c7fb24ddeba2ce69e24b842e1f4ae94243f
+PODFILE CHECKSUM: 458b908e01fe39490c8568b66251788e0d4234ec
 
 COCOAPODS: 1.8.4
