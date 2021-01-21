@@ -12,7 +12,8 @@ import UIKit
 class EventTableViewCell: UITableViewCell {
     
     @IBOutlet weak var eventImage: UIImageView?
-    @IBOutlet weak var label: UILabel?
+    @IBOutlet weak var titleLabel: UILabel?
+    @IBOutlet weak var date: UILabel?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -23,7 +24,11 @@ class EventTableViewCell: UITableViewCell {
         guard let event  = event else {
             return
         }
-        label?.text = event.title;
+        titleLabel?.text = event.title;
+        date?.text = event.dateString
+        if let url = event.imageUrl {
+            eventImage?.af.setImage(withURL: url)
+        }
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
