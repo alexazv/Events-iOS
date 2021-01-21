@@ -13,7 +13,7 @@ class EventDetailViewController: UIViewController {
     private var viewModel: EventDetailViewModel?
     @IBOutlet weak var eventImage: UIImageView?
     @IBOutlet weak var titleLabel: UILabel?
-    @IBOutlet weak var descriptionLabel: UILabel?
+    @IBOutlet weak var descriptionTextField: UITextView?
     @IBOutlet weak var mapView: MKMapView?
     @IBOutlet weak var priceLabel: UILabel?
     @IBOutlet weak var date: UILabel?
@@ -30,7 +30,7 @@ class EventDetailViewController: UIViewController {
         titleLabel?.text = event.title
         date?.text = event.dateString
         priceLabel?.text = String(format: "R$%.2f", event.price ?? 0)
-        descriptionLabel?.text = event.description
+        descriptionTextField?.text = event.description
         if let url = event.imageUrl {
             eventImage?.af.setImage(withURL: url)
         }

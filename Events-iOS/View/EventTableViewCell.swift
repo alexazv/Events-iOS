@@ -14,6 +14,7 @@ class EventTableViewCell: UITableViewCell {
     @IBOutlet weak var eventImage: UIImageView?
     @IBOutlet weak var titleLabel: UILabel?
     @IBOutlet weak var date: UILabel?
+    @IBOutlet weak var containerView: UIView?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -29,12 +30,19 @@ class EventTableViewCell: UITableViewCell {
         if let url = event.imageUrl {
             eventImage?.af.setImage(withURL: url)
         }
+       setupContainerView()
+       selectionStyle = .none
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    }
+    
+    private func setupContainerView() {
+        containerView?.layer.shadowOpacity = 0.5
+        containerView?.layer.shadowOffset = CGSize(width: 3, height: 3)
+        containerView?.layer.shadowRadius = 8.0
+        containerView?.layer.shadowColor = UIColor.systemGray.cgColor
     }
 
 }
