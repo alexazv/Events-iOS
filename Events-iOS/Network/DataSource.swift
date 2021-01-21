@@ -11,7 +11,7 @@ class DataSource {
     static private var mock = false;
     static private var returnError = false;
     
-    static func heroDataSource() -> EventDataSource {
+    static func eventDataSource() -> EventDataSource {
         if (mock) {
             return EventAPISource(requestMaker: MockEventRequestMaker(returnError: returnError))
         } else {

@@ -1,8 +1,8 @@
 //
-//  HeroAPISource.swift
+//  EventAPISource.swift
 //  Events-iOS
 //
-//  Created by Alexandre Azevedo on 12/13/20.
+//  Created by Alexandre Azevedo on 21/01/21.
 //
 
 import Foundation
