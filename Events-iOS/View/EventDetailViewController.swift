@@ -19,8 +19,7 @@ class EventDetailViewController: UIViewController {
     @IBOutlet weak var date: UILabel?
     
     func setup(_ eventId: String) {
-        viewModel = EventDetailViewModel(bindToViewController: updateView)
-        viewModel?.eventId = eventId;
+        viewModel = EventDetailViewModel(eventId: eventId, bindToViewController: updateView)
     }
     
     private func updateView() {
@@ -52,10 +51,14 @@ class EventDetailViewController: UIViewController {
         mapView?.setCenter(coordinate, animated: true);
         mapView?.setRegion(viewRegion, animated: true)
     }
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    
+    @IBAction func didTapCheckin() {
+        guard let eventId = viewModel?.event?.eventId else { return }
+        
+        let storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc: EventCheckinViewController = storyboard.instantiateViewController(withIdentifier: "EventCheckinViewController") as! EventCheckinViewController
+        vc.setup(id: eventId)
+        
+        navigationController?.pushViewController(vc, animated: true)
     }
 }

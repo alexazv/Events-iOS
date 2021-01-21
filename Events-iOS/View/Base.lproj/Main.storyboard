@@ -131,7 +131,13 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tg5-8e-Gh5">
                                 <rect key="frame" x="346" y="126" width="60" height="30"/>
-                                <state key="normal" title="Check in"/>
+                                <color key="backgroundColor" red="1" green="0.83503608750000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Check in">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapCheckin" destination="Pds-rf-e0w" eventType="touchUpInside" id="iwb-ad-HM9"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vfb-k0-AXz">
                                 <rect key="frame" x="63" y="196" width="335" height="14.5"/>
@@ -177,6 +183,65 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5xq-pF-FcK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1990" y="58"/>
+        </scene>
+        <!--Event Checkin View Controller-->
+        <scene sceneID="adL-n9-Kbu">
+            <objects>
+                <viewController storyboardIdentifier="EventCheckinViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="5Zk-Lu-3ZQ" customClass="EventCheckinViewController" customModule="Events_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QQh-hn-jjc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nome" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5xP-IM-l4R">
+                                <rect key="frame" x="16" y="132" width="382" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uAw-fg-p2U">
+                                <rect key="frame" x="16" y="182" width="382" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirme a preseça neste evento!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Qd-Qw-KUn">
+                                <rect key="frame" x="16" y="76" width="382" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cy8-Q4-uFQ">
+                                <rect key="frame" x="16" y="248" width="382" height="30"/>
+                                <state key="normal" title="Enviar"/>
+                                <connections>
+                                    <action selector="didTapSendBtn:" destination="5Zk-Lu-3ZQ" eventType="touchUpInside" id="TdT-ZY-kw3"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="BQ2-3E-wN7"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="BQ2-3E-wN7" firstAttribute="trailing" secondItem="5xP-IM-l4R" secondAttribute="trailing" constant="16" id="8Jy-kp-hpJ"/>
+                            <constraint firstItem="5xP-IM-l4R" firstAttribute="leading" secondItem="BQ2-3E-wN7" secondAttribute="leading" constant="16" id="Cc7-p4-hE5"/>
+                            <constraint firstItem="BQ2-3E-wN7" firstAttribute="trailing" secondItem="8Qd-Qw-KUn" secondAttribute="trailing" constant="16" id="Cwf-ls-qRw"/>
+                            <constraint firstItem="BQ2-3E-wN7" firstAttribute="trailing" secondItem="uAw-fg-p2U" secondAttribute="trailing" constant="16" id="QTm-sP-H8o"/>
+                            <constraint firstItem="cy8-Q4-uFQ" firstAttribute="top" secondItem="uAw-fg-p2U" secondAttribute="bottom" constant="32" id="RFS-wy-PXr"/>
+                            <constraint firstItem="cy8-Q4-uFQ" firstAttribute="leading" secondItem="BQ2-3E-wN7" secondAttribute="leading" constant="16" id="Wq0-dy-8NR"/>
+                            <constraint firstItem="BQ2-3E-wN7" firstAttribute="trailing" secondItem="cy8-Q4-uFQ" secondAttribute="trailing" constant="16" id="dB8-wu-5Ss"/>
+                            <constraint firstItem="uAw-fg-p2U" firstAttribute="leading" secondItem="BQ2-3E-wN7" secondAttribute="leading" constant="16" id="dBW-yO-XK8"/>
+                            <constraint firstItem="5xP-IM-l4R" firstAttribute="top" secondItem="8Qd-Qw-KUn" secondAttribute="bottom" constant="32" id="far-K0-IZD"/>
+                            <constraint firstItem="uAw-fg-p2U" firstAttribute="top" secondItem="5xP-IM-l4R" secondAttribute="bottom" constant="16" id="hfV-hl-sfb"/>
+                            <constraint firstItem="8Qd-Qw-KUn" firstAttribute="top" secondItem="BQ2-3E-wN7" secondAttribute="top" constant="32" id="irP-HD-XX7"/>
+                            <constraint firstItem="8Qd-Qw-KUn" firstAttribute="leading" secondItem="BQ2-3E-wN7" secondAttribute="leading" constant="16" id="pgC-5b-FbL"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="emailField" destination="uAw-fg-p2U" id="roO-et-pYj"/>
+                        <outlet property="nameField" destination="5xP-IM-l4R" id="Gdr-sU-K4n"/>
+                        <outlet property="sendButton" destination="cy8-Q4-uFQ" id="FWV-qQ-9YV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qf3-Rg-qrb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2822" y="58"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="g87-rc-5At">

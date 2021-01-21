@@ -9,5 +9,6 @@ import Foundation
 import ObjectMapper
 
 protocol RequestMaker {
-    func request(_ url: String, parameters: [String:Any], completion: @escaping (Data?, Error?) -> Void)
+    func get(_ url: String, parameters: [String:Any], completion: @escaping (Data?, Error?) -> Void)
+    func post(_ url: String, parameters: [String:Any], completion: @escaping (Data?, Error?) -> Void)
 }

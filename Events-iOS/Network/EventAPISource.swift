@@ -42,7 +42,7 @@ class EventAPISource: EventDataSource {
         return Single.create { observer in
             let disposable = Disposables.create()
             
-            self.requestMaker.request(url, parameters: [:]) { data, error in
+            self.requestMaker.get(url, parameters: [:]) { data, error in
                 
                 if let error = error {
                     observer(.failure(error))
@@ -73,7 +73,7 @@ class EventAPISource: EventDataSource {
         return Single.create { observer in
             let disposable = Disposables.create()
             
-            self.requestMaker.request(url, parameters: [:]) { data, error in
+            self.requestMaker.get(url, parameters: [:]) { data, error in
                 
                 if let error = error {
                     observer(.failure(error))
@@ -91,6 +91,32 @@ class EventAPISource: EventDataSource {
                 } catch let error {
                     observer(.failure(error));
                 }
+            }
+            
+            return disposable
+        }
+    }
+    
+    func confirmEvent(id: String, name: String, email: String) -> Completable {
+        let url = "\(self.baseUrl)checkin/"
+        
+        let parameters: [String: Any] = [
+            "eventId": id,
+            "name": name,
+            "email": email,
+        ]
+        
+        return Completable.create { observer in
+            let disposable = Disposables.create()
+            
+            self.requestMaker.post(url, parameters: parameters) { _, error in
+                
+                if let error = error {
+                    observer(.error(error))
+                    return
+                }
+                
+                observer(.completed);
             }
             
             return disposable
