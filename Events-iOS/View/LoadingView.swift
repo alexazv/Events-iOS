@@ -8,11 +8,12 @@
 import UIKit
 
 class LoadingView: UIView {
-    
+    @IBOutlet weak var heightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     var contentView : UIView?
     var loading: Bool = false {
         didSet {
-            updateLoadingView()
+            animateLoadingView()
         }
     }
     
@@ -26,8 +27,14 @@ class LoadingView: UIView {
         xibSetup()
     }
     
-    private func updateLoadingView() {
-        isHidden = !loading
+    private func animateLoadingView() {
+        UIView.animate(withDuration: 0.5, animations: {
+            self.heightConstraint.constant = self.loading ? 50 : 0
+            self.layoutIfNeeded()
+        }, completion: { _ in
+            if (self.loading) { self.loadingIndicator?.startAnimating() }
+            else { self.loadingIndicator?.stopAnimating() }
+        })
     }
 
     func xibSetup() {
