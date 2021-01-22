@@ -17,6 +17,7 @@ class EventFeedViewControllerTest: XCTestCase {
         let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         systemUnderTest = storyboard.instantiateViewController(withIdentifier: "EventFeedViewController")
             as? EventFeedViewController
+        systemUnderTest?.loadView()
     }
 
     override func tearDown() {

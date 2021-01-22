@@ -43,8 +43,9 @@ class LoadingView: UIView {
         contentView?.frame = bounds
 
         contentView?.autoresizingMask = [UIView.AutoresizingMask.flexibleWidth, UIView.AutoresizingMask.flexibleHeight]
-
-        addSubview(contentView!)
+        if let contentView = contentView {
+            addSubview(contentView)
+        }
     }
 
     func loadViewFromNib() -> UIView? {
