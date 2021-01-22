@@ -15,7 +15,6 @@
 		ACCF9B5C25B9AC390083300A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACCF9B5A25B9AC390083300A /* Main.storyboard */; };
 		ACCF9B5E25B9AC3B0083300A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACCF9B5D25B9AC3B0083300A /* Assets.xcassets */; };
 		ACCF9B6125B9AC3B0083300A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACCF9B5F25B9AC3B0083300A /* LaunchScreen.storyboard */; };
-		ACCF9B6C25B9AC3B0083300A /* Events_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCF9B6B25B9AC3B0083300A /* Events_iOSTests.swift */; };
 		ACCF9B7725B9AC3B0083300A /* Events_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCF9B7625B9AC3B0083300A /* Events_iOSUITests.swift */; };
 		ACCF9BA125B9AD510083300A /* MockEvents.json in Resources */ = {isa = PBXBuildFile; fileRef = ACCF9BA025B9AD510083300A /* MockEvents.json */; };
 		ACCF9BA625B9ADB40083300A /* EventDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCF9BA525B9ADB40083300A /* EventDataSource.swift */; };
@@ -74,7 +73,6 @@
 		ACCF9B6025B9AC3B0083300A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ACCF9B6225B9AC3B0083300A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ACCF9B6725B9AC3B0083300A /* Events-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Events-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		ACCF9B6B25B9AC3B0083300A /* Events_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Events_iOSTests.swift; sourceTree = "<group>"; };
 		ACCF9B6D25B9AC3B0083300A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ACCF9B7225B9AC3B0083300A /* Events-iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Events-iOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACCF9B7625B9AC3B0083300A /* Events_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Events_iOSUITests.swift; sourceTree = "<group>"; };
@@ -187,7 +185,6 @@
 			isa = PBXGroup;
 			children = (
 				ACCF9BD125B9B8E80083300A /* NetworkTest.swift */,
-				ACCF9B6B25B9AC3B0083300A /* Events_iOSTests.swift */,
 				ACCF9B6D25B9AC3B0083300A /* Info.plist */,
 				AC7C269225BAF1E000B2DCEF /* EventFeedViewControllerTest.swift */,
 			);
@@ -572,7 +569,6 @@
 			files = (
 				AC7C269325BAF1E000B2DCEF /* EventFeedViewControllerTest.swift in Sources */,
 				ACCF9BD225B9B8E80083300A /* NetworkTest.swift in Sources */,
-				ACCF9B6C25B9AC3B0083300A /* Events_iOSTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
