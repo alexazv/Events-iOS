@@ -20,29 +20,29 @@ class EventFeedViewModel {
             self.bindLoadingChange()
         }
     }
-    
+
     var errorMessage: String = "There was an error retrieving info"
-    
+
     init(bindToViewController: @escaping () -> Void, bindLoadingChange: @escaping () -> Void = {}) {
         self.bindToViewController = bindToViewController
         self.bindLoadingChange = bindLoadingChange
         fetch()
     }
-    
+
     func onErrorConfirm() {
         error = nil
         fetch()
     }
-    
+
     private func fetch() {
         guard !loading else { return }
         loading = true
         error = nil
         dataSource.getEvents().subscribe(
             onSuccess: { events in
-                self.events = events;
-                self.bindToViewController();
-                self.loading = false;
+                self.events = events
+                self.bindToViewController()
+                self.loading = false
             }, onFailure: { error in
                 self.error = error
                 self.loading = false

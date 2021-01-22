@@ -16,11 +16,10 @@ class NetworkTest: XCTestCase {
 
     var systemUnderTest: EventDataSource!
     let disposeBag = DisposeBag()
-    
     override func setUpWithError() throws {
         systemUnderTest = EventAPISource(requestMaker: MockEventRequestMaker())
     }
-    
+
     func testGetItems() {
         systemUnderTest = EventAPISource(requestMaker: MockEventRequestMaker(returnError: false))
         let expectation = XCTestExpectation(description: "response")
@@ -32,10 +31,10 @@ class NetworkTest: XCTestCase {
                 XCTAssertNil(error)
                 expectation.fulfill()
             }).disposed(by: disposeBag)
-        
+
         wait(for: [expectation], timeout: 2)
     }
-    
+
     func testfowardsError() {
         systemUnderTest = EventAPISource(requestMaker: MockEventRequestMaker(returnError: true))
         let expectation = XCTestExpectation(description: "response")
