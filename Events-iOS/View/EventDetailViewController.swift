@@ -17,9 +17,10 @@ class EventDetailViewController: UIViewController {
     @IBOutlet weak var mapView: MKMapView?
     @IBOutlet weak var priceLabel: UILabel?
     @IBOutlet weak var date: UILabel?
+    @IBOutlet weak var loadingView: LoadingView?
     
     func setup(_ eventId: String) {
-        viewModel = EventDetailViewModel(eventId: eventId, bindToViewController: updateView)
+        viewModel = EventDetailViewModel(eventId: eventId, bindToViewController: updateView, bindLoadingChange: updateLoadingView)
     }
     
     private func updateView() {
@@ -34,6 +35,10 @@ class EventDetailViewController: UIViewController {
         if let url = event.imageUrl {
             eventImage?.af.setImage(withURL: url, imageTransition: UIImageView.ImageTransition.crossDissolve(0.25), runImageTransitionIfCached: true)
         }
+    }
+    
+    private func updateLoadingView() {
+        loadingView?.loading = viewModel?.loading ?? true
     }
     
     private func updateMapView() {

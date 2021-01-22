@@ -96,18 +96,28 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="TFO-96-AWS"/>
                                 </connections>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Iqj-W9-05V" customClass="LoadingView" customModule="Events_iOS" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="88" width="414" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="NE3-RH-ZU1"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Iqj-W9-05V" secondAttribute="trailing" id="A80-E4-sUL"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="AId-hv-Ljd" secondAttribute="trailing" id="BuI-Zv-GiM"/>
                             <constraint firstItem="AId-hv-Ljd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="EuL-4g-jB4"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="AId-hv-Ljd" secondAttribute="bottom" id="PJg-II-HaQ"/>
                             <constraint firstItem="AId-hv-Ljd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Rzm-w3-yox"/>
+                            <constraint firstItem="Iqj-W9-05V" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="aIX-ti-bzT"/>
+                            <constraint firstItem="Iqj-W9-05V" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="hz7-ec-bny"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Eventos" id="uVc-Yo-hdH"/>
                     <connections>
+                        <outlet property="loadingView" destination="Iqj-W9-05V" id="DX2-Yv-wDm"/>
                         <outlet property="tableView" destination="AId-hv-Ljd" id="KWb-BG-5hn"/>
                     </connections>
                 </viewController>
@@ -123,6 +133,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9qW-oA-WLF" customClass="LoadingView" customModule="Events_iOS" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44" width="414" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="BdA-TY-Brm"/>
+                                </constraints>
+                            </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VLq-hs-y6Z">
                                 <rect key="frame" x="0.0" y="44" width="414" height="120"/>
                                 <color key="backgroundColor" red="0.98823529409999999" green="0.85098039219999999" blue="0.61568627450000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -189,12 +205,14 @@
                             <constraint firstItem="VLq-hs-y6Z" firstAttribute="leading" secondItem="Fzk-7L-9aS" secondAttribute="leading" id="3BF-kB-ocT"/>
                             <constraint firstItem="tg5-8e-Gh5" firstAttribute="bottom" secondItem="VLq-hs-y6Z" secondAttribute="bottom" constant="-8" id="6Kz-U8-pf8"/>
                             <constraint firstItem="Fzk-7L-9aS" firstAttribute="trailing" secondItem="Vfb-k0-AXz" secondAttribute="trailing" constant="16" id="BQz-cs-fAU"/>
+                            <constraint firstItem="9qW-oA-WLF" firstAttribute="top" secondItem="Fzk-7L-9aS" secondAttribute="top" id="KfZ-Ci-Ohq"/>
                             <constraint firstItem="VLq-hs-y6Z" firstAttribute="top" secondItem="Fzk-7L-9aS" secondAttribute="top" id="OID-rP-rJx"/>
                             <constraint firstItem="L3c-dh-lb2" firstAttribute="top" secondItem="xC0-Xt-5T5" secondAttribute="bottom" constant="16" id="Qag-fc-d1P"/>
                             <constraint firstItem="Fzk-7L-9aS" firstAttribute="trailing" secondItem="xC0-Xt-5T5" secondAttribute="trailing" constant="16" id="Rd6-9z-AHv"/>
                             <constraint firstItem="XdT-pU-abw" firstAttribute="leading" secondItem="Fzk-7L-9aS" secondAttribute="leading" constant="16" id="Ugw-BT-xHD"/>
                             <constraint firstItem="L3c-dh-lb2" firstAttribute="leading" secondItem="Fzk-7L-9aS" secondAttribute="leading" constant="16" id="Vh5-3n-gVI"/>
                             <constraint firstItem="tg5-8e-Gh5" firstAttribute="trailing" secondItem="VLq-hs-y6Z" secondAttribute="trailing" constant="-8" id="Wby-zF-zZI"/>
+                            <constraint firstItem="9qW-oA-WLF" firstAttribute="leading" secondItem="Fzk-7L-9aS" secondAttribute="leading" id="Xa7-PY-c6W"/>
                             <constraint firstItem="xC0-Xt-5T5" firstAttribute="leading" secondItem="Fzk-7L-9aS" secondAttribute="leading" constant="16" id="Y8Y-Dh-sEt"/>
                             <constraint firstItem="Vfb-k0-AXz" firstAttribute="top" secondItem="VLq-hs-y6Z" secondAttribute="bottom" constant="32" id="Yyo-pT-0Wf"/>
                             <constraint firstItem="Fzk-7L-9aS" firstAttribute="trailing" secondItem="L3c-dh-lb2" secondAttribute="trailing" constant="16" id="Zi2-Ke-mun"/>
@@ -206,12 +224,14 @@
                             <constraint firstItem="Fzk-7L-9aS" firstAttribute="bottom" secondItem="L3c-dh-lb2" secondAttribute="bottom" constant="16" id="lTu-bd-JtE"/>
                             <constraint firstItem="10U-E5-QtA" firstAttribute="leading" secondItem="Fzk-7L-9aS" secondAttribute="leading" constant="16" id="ssm-8L-82Z"/>
                             <constraint firstItem="Fzk-7L-9aS" firstAttribute="trailing" secondItem="10U-E5-QtA" secondAttribute="trailing" constant="16" id="wsU-8s-g9z"/>
+                            <constraint firstItem="Fzk-7L-9aS" firstAttribute="trailing" secondItem="9qW-oA-WLF" secondAttribute="trailing" id="yvP-wl-Zx3"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="date" destination="XdT-pU-abw" id="jC6-Xo-0bU"/>
                         <outlet property="descriptionTextField" destination="L3c-dh-lb2" id="Uy0-3Q-0aW"/>
                         <outlet property="eventImage" destination="VLq-hs-y6Z" id="tM0-24-ype"/>
+                        <outlet property="loadingView" destination="9qW-oA-WLF" id="Y8A-FF-Qlz"/>
                         <outlet property="mapView" destination="xC0-Xt-5T5" id="SJG-6d-ToT"/>
                         <outlet property="priceLabel" destination="Vfb-k0-AXz" id="9hP-Ee-wtW"/>
                         <outlet property="titleLabel" destination="10U-E5-QtA" id="QX5-FR-8is"/>

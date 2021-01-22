@@ -10,6 +10,7 @@ import UIKit
 class EventFeedViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView?
+    @IBOutlet weak var loadingView: LoadingView?
     private var viewModel: EventFeedViewModel?
     private let reuseIdentifier = "EventTableViewCell"
     
@@ -23,7 +24,11 @@ class EventFeedViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     private func setupViewModel() {
-        viewModel = EventFeedViewModel(bindToViewController: onViewModelUpdate)
+        viewModel = EventFeedViewModel(bindToViewController: onViewModelUpdate, bindLoadingChange: updateLoadingView)
+    }
+    
+    private func updateLoadingView() {
+        loadingView?.loading = viewModel?.loading ?? true
     }
     
     private func onViewModelUpdate() {
