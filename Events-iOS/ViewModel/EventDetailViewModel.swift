@@ -22,28 +22,28 @@ class EventDetailViewModel {
         }
     }
     private (set) var eventId: String
-    
+
     init(eventId: String, bindToViewController: @escaping () -> Void, bindLoadingChange: @escaping () -> Void = {}) {
         self.eventId = eventId
         self.bindToViewController = bindToViewController
         self.bindLoadingChange = bindLoadingChange
         fetch()
     }
-    
+
     func onErrorConfirm() {
         error = nil
         fetch()
     }
-    
+
     private func fetch() {
         guard !loading else { return }
         loading = true
         error = nil
-        dataSource.getEvent(id: eventId).subscribe(
+        dataSource.getEvent(eventId: eventId).subscribe(
             onSuccess: { event in
-                self.event = event;
-                self.bindToViewController();
-                self.loading = false;
+                self.event = event
+                self.bindToViewController()
+                self.loading = false
             }, onFailure: { error in
                 self.error = error
                 self.loading = false

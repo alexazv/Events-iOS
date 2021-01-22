@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC7C269325BAF1E000B2DCEF /* EventFeedViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7C269225BAF1E000B2DCEF /* EventFeedViewControllerTest.swift */; };
+		AC7C26B025BAF50E00B2DCEF /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = AC7C26AF25BAF50E00B2DCEF /* .swiftlint.yml */; };
 		ACCF9B5525B9AC390083300A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCF9B5425B9AC390083300A /* AppDelegate.swift */; };
 		ACCF9B5725B9AC390083300A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCF9B5625B9AC390083300A /* SceneDelegate.swift */; };
 		ACCF9B5925B9AC390083300A /* EventFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCF9B5825B9AC390083300A /* EventFeedViewController.swift */; };
@@ -61,6 +63,8 @@
 		770781B6C1D52F584D8B8D40 /* Pods-Events-iOS-Events-iOSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Events-iOS-Events-iOSUITests.debug.xcconfig"; path = "Target Support Files/Pods-Events-iOS-Events-iOSUITests/Pods-Events-iOS-Events-iOSUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		8D5B1F55DCD16C149ACED7AF /* Pods-Events-iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Events-iOSTests.release.xcconfig"; path = "Target Support Files/Pods-Events-iOSTests/Pods-Events-iOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		A8CDC95A8E30D3973564FC4B /* Pods_Events_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Events_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC7C269225BAF1E000B2DCEF /* EventFeedViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventFeedViewControllerTest.swift; sourceTree = "<group>"; };
+		AC7C26AF25BAF50E00B2DCEF /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		ACCF9B5125B9AC390083300A /* Events-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Events-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACCF9B5425B9AC390083300A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ACCF9B5625B9AC390083300A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -143,6 +147,7 @@
 		ACCF9B4825B9AC380083300A = {
 			isa = PBXGroup;
 			children = (
+				AC7C26AF25BAF50E00B2DCEF /* .swiftlint.yml */,
 				ACCF9B5325B9AC390083300A /* Events-iOS */,
 				ACCF9B6A25B9AC3B0083300A /* Events-iOSTests */,
 				ACCF9B7525B9AC3B0083300A /* Events-iOSUITests */,
@@ -184,6 +189,7 @@
 				ACCF9BD125B9B8E80083300A /* NetworkTest.swift */,
 				ACCF9B6B25B9AC3B0083300A /* Events_iOSTests.swift */,
 				ACCF9B6D25B9AC3B0083300A /* Info.plist */,
+				AC7C269225BAF1E000B2DCEF /* EventFeedViewControllerTest.swift */,
 			);
 			path = "Events-iOSTests";
 			sourceTree = "<group>";
@@ -274,6 +280,7 @@
 				ACCF9B4E25B9AC390083300A /* Frameworks */,
 				ACCF9B4F25B9AC390083300A /* Resources */,
 				705EBA767103ECC61E131B05 /* [CP] Embed Pods Frameworks */,
+				AC7C26A825BAF44700B2DCEF /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -374,6 +381,7 @@
 				ACCF9B6125B9AC3B0083300A /* LaunchScreen.storyboard in Resources */,
 				ACCF9B5E25B9AC3B0083300A /* Assets.xcassets in Resources */,
 				ACCF9BA125B9AD510083300A /* MockEvents.json in Resources */,
+				AC7C26B025BAF50E00B2DCEF /* .swiftlint.yml in Resources */,
 				ACCF9B5C25B9AC390083300A /* Main.storyboard in Resources */,
 				ACFAF80625BA46AB00AE2AFA /* LoadingView.xib in Resources */,
 			);
@@ -456,6 +464,23 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Events-iOS/Pods-Events-iOS-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		AC7C26A825BAF44700B2DCEF /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\" --config .swiftlint.yml\n";
 		};
 		B4B742752730A5FFFBF7B0F4 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -545,6 +570,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC7C269325BAF1E000B2DCEF /* EventFeedViewControllerTest.swift in Sources */,
 				ACCF9BD225B9B8E80083300A /* NetworkTest.swift in Sources */,
 				ACCF9B6C25B9AC3B0083300A /* Events_iOSTests.swift in Sources */,
 			);

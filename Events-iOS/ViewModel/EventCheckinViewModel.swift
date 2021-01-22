@@ -21,23 +21,23 @@ class EventCheckinViewModel {
             self.bindLoadingChange()
         }
     }
-    
+
     private (set) var eventId: String
-    
+
     init(eventId: String, bindToViewController: @escaping () -> Void, bindLoadingChange: @escaping () -> Void = {}) {
         self.eventId = eventId
         self.bindLoadingChange = bindLoadingChange
         self.bindToViewController = bindToViewController
     }
-    
+
     func send(name: String, email: String) {
         guard !loading else { return }
         loading = true
         error = nil
-        dataSource.confirmEvent(id: eventId, name: name, email: email)
+        dataSource.confirmEvent(eventId: eventId, name: name, email: email)
             .subscribe(onCompleted: {
-                self.bindToViewController();
-                self.loading = false;
+                self.bindToViewController()
+                self.loading = false
             }, onError: { error in
                 self.error = error
                 self.loading = false

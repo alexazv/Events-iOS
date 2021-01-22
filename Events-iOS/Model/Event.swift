@@ -6,8 +6,6 @@
 //
 
 import Foundation
-
-import Foundation
 import ObjectMapper
 
 class Event: Mappable {
@@ -19,7 +17,7 @@ class Event: Mappable {
     var latitude: Double?
     var longitude: Double?
     var price: Float?
-    
+
     var dateString: String {
         guard let date = date else { return "" }
         let dateFormatter = DateFormatter()
@@ -29,11 +27,11 @@ class Event: Mappable {
         dateFormatter.locale = Locale(identifier: "pt-br")
         return dateFormatter.string(from: date)
     }
-    
+
     required init?(map: Map) {
 
     }
-    
+
     func mapping(map: Map) {
         eventId <- map["id"]
         title <- map["title"]
@@ -41,13 +39,13 @@ class Event: Mappable {
         latitude <- map["latitude"]
         longitude <- map["longitude"]
         price <- map["price"]
-        
+
         var dateEpoch: Int?
         dateEpoch <- map["date"]
         if let dateEpoch = dateEpoch {
           date = Date(timeIntervalSince1970: Double(dateEpoch))
         }
-        
+
         var path: String = ""
         path <- map["image"]
         imageUrl = URL(string: path)
